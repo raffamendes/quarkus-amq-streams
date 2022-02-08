@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: quarkus-amq-streams
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - quarkus-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /message
+    route:
+    - destination:
+        host: amq-streams-quarkus.quarkus-amq-streams-mesh.svc.cluster.local
+        port:
+          number: 80

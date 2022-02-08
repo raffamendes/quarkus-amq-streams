@@ -1,0 +1,23 @@
+{
+  "namespace": "com.rmendes.model",
+  "type": "record",
+  "name": "Transaction",
+  "fields": [
+    {
+      "name": "originAccountNumber",
+      "type": "long"
+    },
+    {
+      "name": "destinyAccountNumber",
+      "type": "long"
+    },
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "value",
+      "type": "int"
+    }
+  ]
+}
